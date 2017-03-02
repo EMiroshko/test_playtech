@@ -124,7 +124,7 @@ function reqListener () {
 * Searches images at Flickr
 */
 document.getElementById("search_button").addEventListener("click", function(e) {
-	var searchName = document.getElementById("search_input").value;
+	var searchName = document.getElementById("search_input").value.split(" ");
 	var searchRequest = new XMLHttpRequest();
 	searchRequest.addEventListener("load", reqListener);
 	searchRequest.open("GET", flickrApiUrl 

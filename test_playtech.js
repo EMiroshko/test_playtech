@@ -11,17 +11,17 @@ var searchContent = document.querySelector(".result_content"),
 	myGallery = {},
 
 	/**
-     * Flickr options
-     * @type {{method: string, format: string, api_key: string, tags: string}}
-     */
-    flickrOptions = {
-        method: 'flickr.photos.search',
-        format: 'json',
-        api_key: 'b54580f369a7eeebecb2004dc429d08f',
-        tags: ''
-    },
+	* Flickr options
+	* @type {{method: string, format: string, api_key: string, tags: string}}
+	*/
+	flickrOptions = {
+	method: 'flickr.photos.search',
+	format: 'json',
+	api_key: 'b54580f369a7eeebecb2004dc429d08f',
+	tags: ''
+	},
 
-    /**
+	/**
 	* Flickr API URL
 	* @type {string}
 	*/
@@ -137,8 +137,8 @@ document.getElementById("search_button").addEventListener("click", function(e) {
 })
 
 /**
- * Adds to images gallery
- */
+* Adds to images gallery
+*/
 document.getElementById("gallery_button").addEventListener("click", function(e) {
 	searchContent.innerHTML = "";
 	for (var imageId in myGallery) {
@@ -147,14 +147,14 @@ document.getElementById("gallery_button").addEventListener("click", function(e) 
 });  
 
 /**
- * Returns URL of image
- * @param {object} image
- * @param {string} image.id
- * @param {number} image.farm
- * @param {string} image.secret
- * @param {string} image.server
- * @returns {string}
- */
+* Returns URL of image
+* @param {object} image
+* @param {string} image.id
+* @param {number} image.farm
+* @param {string} image.secret
+* @param {string} image.server
+* @returns {string}
+*/
 function genUrl(photo) {
 	return "https://farm"
 		+ photo.farm + ".staticflickr.com/"
@@ -164,8 +164,8 @@ function genUrl(photo) {
 }
 
 /**
- * Shows error when request status is not `ok`
- */
+* Shows error when request status is not `ok`
+*/
 function showError() {
     searchContent.innerHTML = 'Request error';
 }

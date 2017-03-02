@@ -147,12 +147,12 @@ document.getElementById("gallery_button").addEventListener("click", function(e) 
 });  
 
 /**
-* Returns URL of image
-* @param {object} image
-* @param {string} image.id
-* @param {number} image.farm
-* @param {string} image.secret
-* @param {string} image.server
+* Returns URL of photo
+* @param {object} photo
+* @param {string} photo.id
+* @param {number} photo.farm
+* @param {string} photo.secret
+* @param {string} photo.server
 * @returns {string}
 */
 function genUrl(photo) {
